@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ZooPrueba.Migrations
 {
     /// <inheritdoc />
-    public partial class nuevaMigracion : Migration
+    public partial class migra : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
