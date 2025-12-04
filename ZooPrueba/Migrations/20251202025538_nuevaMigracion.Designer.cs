@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ZooPrueba.Migrations
 {
     [DbContext(typeof(ZooPruebaContext))]
-    [Migration("20251203015325_migra")]
-    partial class migra
+    [Migration("20251202025538_nuevaMigracion")]
+    partial class nuevaMigracion
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
