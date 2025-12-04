@@ -11,7 +11,7 @@ namespace ApiTest2
             var json = response.Content.ReadAsStringAsync().Result;
             var especiesList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Modelos.Especie>>(json);
             Console.WriteLine(json);
-            Console.ReadLine();     
+            Console.ReadLine();      
         }
     }
 }
