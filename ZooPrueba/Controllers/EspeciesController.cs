@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Modelos;
+using Serilog;
 
 namespace ZooPrueba.Controllers
 {
@@ -28,7 +29,7 @@ namespace ZooPrueba.Controllers
         }
 
         // GET: api/Especies/5
-        [HttpGet("{id}")]
+        [HttpGet("Codigo/{id}")]
         public async Task<ActionResult<Especie>> GetEspecie(int id)
         {
             var especie = await _context.Especies.FindAsync(id);
@@ -48,6 +49,7 @@ namespace ZooPrueba.Controllers
         {
             if (id != especie.Codigo)
             {
+                Log.Error("No coinciden los IDs al actualizar la especie con ID {EspecieId}.", id);
                 return BadRequest();
             }
 
@@ -61,14 +63,16 @@ namespace ZooPrueba.Controllers
             {
                 if (!EspecieExists(id))
                 {
+                    Log.Error("Especie con ID {EspecieId} no encontrada al intentar actualizar.", id);
                     return NotFound();
                 }
                 else
                 {
+                    Log.Error("Error de concurrencia al actualizar la especie con ID {EspecieId}.", id);
                     throw;
                 }
             }
-
+            Log.Information("Especie con ID {EspecieId} actualizada correctamente.", id);
             return NoContent();
         }
 

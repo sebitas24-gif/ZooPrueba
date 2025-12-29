@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelos", "Modelos\Modelos.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiTest2", "ApiTest2\ApiTest2.csproj", "{B6528AE1-1101-4B98-BEB9-F7497743A6EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoologico.ApiConsumer", "Zoologico.ApiConsumer\Zoologico.ApiConsumer.csproj", "{EFE169B9-7D41-4204-B7E0-CA5884A55955}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoologico.MVC", "Zoologico.MVC\Zoologico.MVC.csproj", "{8D7C7224-9627-4CF5-B286-E1F34368C801}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{B6528AE1-1101-4B98-BEB9-F7497743A6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6528AE1-1101-4B98-BEB9-F7497743A6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6528AE1-1101-4B98-BEB9-F7497743A6EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE169B9-7D41-4204-B7E0-CA5884A55955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE169B9-7D41-4204-B7E0-CA5884A55955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE169B9-7D41-4204-B7E0-CA5884A55955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE169B9-7D41-4204-B7E0-CA5884A55955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D7C7224-9627-4CF5-B286-E1F34368C801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7C7224-9627-4CF5-B286-E1F34368C801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7C7224-9627-4CF5-B286-E1F34368C801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7C7224-9627-4CF5-B286-E1F34368C801}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
