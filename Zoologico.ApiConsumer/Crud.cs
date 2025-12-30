@@ -119,6 +119,30 @@ namespace Zoologico.ApiConsumer
                 return new ApiResult<T> { Message = "Error al actualizar" };
             }
         }
+        public static ApiResult<bool> Delete(string id)
+        {
+            // consumir una API y ejecutar el verbo DELETE
+            try
+            {
+                using (var httpClient = new HttpClient())
+                {
+                    // invocar al servicio web
+                    var response = httpClient.DeleteAsync($"{UrlBase}/{id}").Result;
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return ApiResult<bool>.Ok(true);
+                    }
+                    else
+                    {
+                        return ApiResult<bool>.Fail($"Error: {response.StatusCode}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return ApiResult<bool>.Fail(ex.Message);
+            }
+        }
         public static ApiResult<bool> Delete(int id)
         {
             using (var client = new HttpClient())

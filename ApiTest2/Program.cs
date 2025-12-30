@@ -21,7 +21,7 @@ namespace ApiTest2
 
             nuevaEspecie = apiResult.Data;
             nuevaEspecie.NombreComun = "León Modificado";
-            Crud<Especie>.Update(nuevaEspecie.Codigo.ToString(), nuevaEspecie);
+            Crud<Especie>.Update(nuevaEspecie.Codigo, nuevaEspecie);
 
             var unaEspecie = Crud<Especie>.ReadBy("Codigo", "12");
             Crud<Especie>.Delete("12");
